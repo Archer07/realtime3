@@ -1,0 +1,12 @@
+{
+  "name": "ChatIO",
+  "version": "1.0.0",
+  "description": "An Express chat app built using socket.io",
+  "main": "server.js",
+  "author": "Ayoub Nejjari <raysoflee07@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "socket.io": "^2.0.3"
+  }
+}
