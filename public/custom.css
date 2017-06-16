@@ -6,6 +6,6 @@
 #userInput {
   width: 50%;
 }
-#createuser button {
+#createuser button, #input button {
   margin-top: .5em;
 }

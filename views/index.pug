@@ -38,4 +38,16 @@ html
                 strong Username: 
               input.form-control#userInput(type='text' placeholder='Your chat username...' required)
               button.btn.btn-primary(type='submit') Enter
-            
+          .chatroom
+            h2 Enjoy the RealTime converstaion:
+            #messages
+              ul
+            #msgInput
+              form#input
+                textarea.form-control(name='msg' placeholder='Type a message...' required)
+                button.btn.btn-primary(type='submit') Send
+  script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")
+  script(src='main.js')
+  
+   
