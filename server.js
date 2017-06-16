@@ -32,9 +32,16 @@ io.sockets.on('connection', (socket) => {
     callback(true);
     socket.user = data;
     users.push(socket.user);
-    console.log(users);
+    // console.log(users);
     io.sockets.emit('users', users);
   });
+
+  socket.on('msg', (data) => {
+    // console.log('message received');
+    // console.log(data);
+    io.sockets.emit('addmsg', {user: socket.user, text: data});
+  });
+
   socket.on('disconnect', () => {
     console.log('disconnected');
     if(!socket.user) return;

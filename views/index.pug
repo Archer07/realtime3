@@ -42,10 +42,10 @@ html
           .chatroom
             h2 Enjoy the RealTime converstaion:
             #messages
-              ul
+              ul.list-group
             #msgInput
               form#input
-                textarea.form-control(name='msg' placeholder='Type a message...' required)
+                textarea#msg.form-control( placeholder='Type a message...' required)
                 button.btn.btn-primary(type='submit') Send
   script(src='https://code.jquery.com/jquery-3.2.1.min.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")
