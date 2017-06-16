@@ -9,3 +9,12 @@
 #createuser button, #input button {
   margin-top: .5em;
 }
+
+.chatroom {
+  display: none;
+}
+
+span.connected {
+  width: 10px;
+  border-radius: 50%;
+}

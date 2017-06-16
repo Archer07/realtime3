@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 3000;
 let app = express();
 let server = http.Server(app);
 
+// chat users
+let users = [];
+
+
 let io = require('socket.io')(server);
 
 
@@ -22,8 +26,21 @@ app.get('/', (req, res, next) => {
 });
 
 // testing socket connection
-io.on('connection', (socket) => {
-  console.log('user has been connected!');
+io.sockets.on('connection', (socket) => {
+  // on createUser event
+  socket.on('createUser', (data, callback) => {
+    callback(true);
+    socket.user = data;
+    users.push(socket.user);
+    console.log(users);
+    io.sockets.emit('users', users);
+  });
+  socket.on('disconnect', () => {
+    console.log('disconnected');
+    if(!socket.user) return;
+    users.splice(users.indexOf(socket.user), 1);
+    io.sockets.emit('disconnected', users);
+  });
 });
 
 
