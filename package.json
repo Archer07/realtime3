@@ -7,6 +7,10 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
     "socket.io": "^2.0.3"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
