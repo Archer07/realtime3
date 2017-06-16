@@ -1,0 +1,11 @@
+.centered {
+  margin: 0 auto;
+  width: 65%;
+}
+
+#userInput {
+  width: 50%;
+}
+#createuser button {
+  margin-top: .5em;
+}
