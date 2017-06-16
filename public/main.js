@@ -60,11 +60,10 @@ $(document).ready(function() {
         }
       }
     });
-
   });
   socket.on('addmsg', function(data) {
     console.log(data.text);
-    msgbox.append('<li class="list-group-item"><strong>'+ data.user + '</strong>: '+ data.text +'</li>');
+    msgbox.append('<li class="list-group-item"><span class="user"><strong>'+ data.user + '</strong></span>: '+ data.text +'</li>');
   })
 
 });

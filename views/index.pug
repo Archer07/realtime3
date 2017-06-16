@@ -16,16 +16,11 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') ChatIO
+          a.navbar-brand(href='#') ChatIO
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              a(href='/') Home
-            li
-              a(href='/about') About
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='/logout') Logout
+              a(href='/') Logout
     .container-fluid.centered
       .row
         .col-md-4
@@ -41,11 +36,11 @@ html
               button.btn.btn-primary(type='submit') Enter
           .chatroom
             h2 Enjoy the RealTime converstaion:
-            #messages
+            #messages.well.well-lg
               ul.list-group
             #msgInput
               form#input
-                textarea#msg.form-control( placeholder='Type a message...' required)
+                input#msg.form-control(type="text" placeholder='Type a message...' required)
                 button.btn.btn-primary(type='submit') Send
   script(src='https://code.jquery.com/jquery-3.2.1.min.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")

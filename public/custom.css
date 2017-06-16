@@ -18,3 +18,7 @@ span.connected {
   width: 10px;
   border-radius: 50%;
 }
+
+.user {
+  color: #158cba;
+}
