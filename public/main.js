@@ -62,8 +62,9 @@ $(document).ready(function() {
     });
   });
   socket.on('addmsg', function(data) {
-    console.log(data.text);
+    // console.log(data.text);
     msgbox.append('<li class="list-group-item"><span class="user"><strong>'+ data.user + '</strong></span>: '+ data.text +'</li>');
-  })
+    $("#messages").prop({ scrollTop: $("#messages").prop("scrollHeight") });
+  });
 
 });
