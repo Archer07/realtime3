@@ -10,7 +10,7 @@ $(document).ready(function() {
   let msgbox = $('#messages ul');
 
   // initializing connection
-  let socket = io.connect('ws://localhost:3000');
+  let socket = io.connect();
   // on connection
   socket.on('connect', () => {
     // alert('connected');

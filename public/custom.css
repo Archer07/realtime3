@@ -22,3 +22,11 @@ span.connected {
 .user {
   color: #158cba;
 }
+#messages {
+  overflow: scroll;
+  height: 25em;
+}
+
+#msgInput {
+  
+}
