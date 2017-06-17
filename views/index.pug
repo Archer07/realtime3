@@ -40,7 +40,7 @@ html
               ul.list-group
             #msgInput
               form#input
-                input#msg.form-control(type="text" placeholder='Type a message...' required)
+                input#msg.form-control(type="text" autocomplete='off' placeholder='Type a message...' required)
                 button.btn.btn-primary(type='submit') Send
   script(src='https://code.jquery.com/jquery-3.2.1.min.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")
